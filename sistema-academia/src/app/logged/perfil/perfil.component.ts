@@ -14,7 +14,6 @@ export class PerfilComponent {
   };
 
   salvar() {
-    console.log('Perfil salvo:', this.perfil);
     alert('Perfil atualizado com sucesso!');
   }
 }

@@ -1,13 +1,12 @@
-<div class="atividades-container">
-    <h1>Minhas Atividades</h1>
-    <p>Acompanhe suas últimas atividades na academia.</p>
-  
-    <div class="atividades-list">
-      <div *ngFor="let atividade of atividades" class="atividade-item">
-        <h2>{{ atividade.titulo }}</h2>
-        <p>{{ atividade.descricao }}</p>
-        <p><strong>Data:</strong> {{ atividade.data | date }}</p>
-      </div>
-    </div>
-  </div>
-  
+<div class="atividades">
+  <h1>Atividades</h1>
+  <h2>Atividades Cadastradas</h2>
+  <ul>
+    <li *ngFor="let atividade of atividades">
+      <h3>{{ atividade.titulo }}</h3>
+      <p>{{ atividade.descricao }}</p>
+      <p><strong>Data da Atividade:</strong> {{ atividade.dataEntrega }}</p>
+      <p><strong>Professor:</strong> {{ atividade.professor }}</p>
+    </li>
+  </ul>
+</div>

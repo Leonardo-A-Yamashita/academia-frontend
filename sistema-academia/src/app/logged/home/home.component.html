@@ -1,5 +1,10 @@
 <div class="home-container">
-    <h1>Bem-vindo à Academia</h1>
-    <p>Escolha uma das opções no menu para começar.</p>
+  <h1>Quadro de Avisos</h1>
+  <div class="avisos">
+    <div *ngFor="let aviso of avisos" class="aviso">
+      <h2>{{ aviso.titulo }}</h2>
+      <p>{{ aviso.descricao }}</p>
+      <span>Publicado em: {{ aviso.dataPublicacao }}</span>
+    </div>
   </div>
-  
+</div>

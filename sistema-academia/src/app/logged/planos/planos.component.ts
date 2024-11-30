@@ -13,11 +13,5 @@ export class PlanosComponent {
       vencimento: new Date('2024-12-01'),
       status: 'Ativo',
     },
-    {
-      titulo: 'Plano Trimestral',
-      descricao: 'Treine por 3 meses com desconto especial.',
-      vencimento: new Date('2025-02-15'),
-      status: 'Ativo',
-    },
   ];
 }

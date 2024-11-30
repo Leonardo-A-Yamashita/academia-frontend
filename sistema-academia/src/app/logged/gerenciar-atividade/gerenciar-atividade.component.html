@@ -1,0 +1,41 @@
+<div class="gerenciar-atividades">
+  <h1>Gerenciar Atividades</h1>
+
+  <!-- Formulário para cadastrar/editar atividades -->
+  <form (ngSubmit)="salvarAtividade()">
+    <div>
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" [(ngModel)]="atividade.titulo" name="titulo" required />
+    </div>
+
+    <div>
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" [(ngModel)]="atividade.descricao" name="descricao" required></textarea>
+    </div>
+
+    <div>
+      <label for="dataEntrega">Data de Entrega</label>
+      <input type="date" id="dataEntrega" [(ngModel)]="atividade.dataEntrega" name="dataEntrega" required />
+    </div>
+
+    <div>
+      <label for="professor">Nome do Professor</label>
+      <input type="text" id="professor" [(ngModel)]="atividade.professor" name="professor" />
+    </div>
+
+    <button type="submit">Salvar</button>
+  </form>
+
+  <!-- Lista de atividades -->
+  <h2>Atividades Cadastradas</h2>
+  <ul>
+    <li *ngFor="let atividade of atividades">
+      <h3>{{ atividade.titulo }}</h3>
+      <p>{{ atividade.descricao }}</p>
+      <p><strong>Data de Entrega:</strong> {{ atividade.dataEntrega }}</p>
+      <p><strong>Professor:</strong> {{ atividade.professor }}</p>
+      <button (click)="editarAtividade(atividade)">Editar</button>
+      <button (click)="excluirAtividade(atividade.id)">Excluir</button>
+    </li>
+  </ul>
+</div>

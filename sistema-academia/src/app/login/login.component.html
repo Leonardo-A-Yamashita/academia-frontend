@@ -1,27 +1,38 @@
 <div class="login-container">
-    <header>
-      <h1>Login</h1>
-      <p>Acesse sua conta no sistema de academia</p>
-    </header>
-  
-    <form class="login-form">
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Digite seu e-mail" required />
-      </div>
-  
-      <div class="form-group">
-        <label for="password">Senha</label>
-        <input type="password" id="password" placeholder="Digite sua senha" required />
-      </div>
-  
-      <button type="button" (click)="login('cliente')">Entrar como Cliente</button>
-      <button type="button" (click)="login('funcionario')">Entrar como Funcionário</button>
-      <button type="button" (click)="login('admin')">Entrar como Admin</button>
-        </form>
-  
-    <div class="register-link">
-      <p>Não tem conta? <a routerLink="/registrar">Cadastre-se</a></p>
+  <header>
+    <h1>Login</h1>
+    <p>Acesse sua conta no sistema de academia</p>
+  </header>
+
+  <form class="login-form">
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="credentials.email"
+        name="email"
+        placeholder="Digite seu e-mail"
+        required
+      />
     </div>
+
+    <div class="form-group">
+      <label for="password">Senha</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="credentials.password"
+        name="password"
+        placeholder="Digite sua senha"
+        required
+      />
+    </div>
+
+    <button type="button" (click)="login()">Entrar</button>
+  </form>
+
+  <div class="register-link">
+    <p>Não tem conta? <a routerLink="/registrar">Cadastre-se</a></p>
   </div>
-  
+</div>
