@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "academia-frontend": {
+    "sistema-academia": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/academia-frontend",
+            "outputPath": "dist/sistema-academia",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "academia-frontend:build:production"
+              "buildTarget": "sistema-academia:build:production"
             },
             "development": {
-              "buildTarget": "academia-frontend:build:development"
+              "buildTarget": "sistema-academia:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "academia-frontend:build"
+            "buildTarget": "sistema-academia:build"
           }
         },
         "test": {
@@ -98,6 +98,6 @@
     }
   },
   "cli": {
-    "analytics": "48ae3c58-bb6d-49ff-92a2-8b52678817fa"
+    "analytics": "cefd522e-3d2e-4512-91ef-8fe36971216e"
   }
 }
