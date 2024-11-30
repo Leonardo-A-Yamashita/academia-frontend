@@ -19,16 +19,12 @@ export class LoggedComponent implements OnInit {
         { label: 'Home', path: 'home' },
         { label: 'Meus Planos', path: 'planos' },
         { label: 'Atividades', path: 'atividades' },
-        { label: 'Perfil', path: 'perfil' },
       ];
     } else if (this.role === 'PROFESSOR') {
       this.menus = [
         { label: 'Home', path: 'home' },
-        { label: 'Gerenciar Clientes', path: 'clientes' },
-        { label: 'Gerenciar Atividades', path: 'gerenciar-atividades' },
         { label: 'Atividades', path: 'atividades' },
-
-        { label: 'Perfil', path: 'perfil' },
+        { label: 'Gerenciar Atividades', path: 'gerenciar-atividades' },
         { label: 'Gerenciar Avisos', path: 'gerenciar-aviso' },
       ];
     }

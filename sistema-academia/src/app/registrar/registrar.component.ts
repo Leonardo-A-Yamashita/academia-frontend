@@ -23,10 +23,13 @@ export class RegistrarComponent {
       this.mensagemErro = 'As senhas não coincidem.';
       return;
     }
-
+  
     this.http.post('http://localhost:8080/api/registrar', this.registro).subscribe({
-      next: () => this.router.navigate(['/login']),
-      error: () => {
+      next: () => {
+        this.router.navigate(['/home']);
+      },
+      error: (error) => {
+        console.error('Erro ao registrar:', error);
         this.mensagemErro = 'Erro ao registrar. Tente novamente.';
       },
     });
