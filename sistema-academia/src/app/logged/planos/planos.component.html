@@ -1,0 +1,14 @@
+<div class="planos-container">
+    <h1>Meus Planos</h1>
+    <p>Acompanhe seus planos de treino e pagamentos.</p>
+  
+    <div class="planos-list">
+      <div *ngFor="let plano of planos" class="plano-card">
+        <h2>{{ plano.titulo }}</h2>
+        <p>{{ plano.descricao }}</p>
+        <p><strong>Vencimento:</strong> {{ plano.vencimento | date }}</p>
+        <p><strong>Status:</strong> {{ plano.status }}</p>
+      </div>
+    </div>
+  </div>
+  

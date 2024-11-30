@@ -1,0 +1,16 @@
+<div class="logged-container">
+    <aside>
+      <nav>
+        <ul>
+          <li *ngFor="let menu of menus">
+            <a routerLink="{{ menu.path }}" routerLinkActive="active">{{ menu.label }}</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  

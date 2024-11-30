@@ -15,8 +15,10 @@
         <input type="password" id="password" placeholder="Digite sua senha" required />
       </div>
   
-      <button type="submit">Entrar</button>
-    </form>
+      <button type="button" (click)="login('cliente')">Entrar como Cliente</button>
+      <button type="button" (click)="login('funcionario')">Entrar como Funcionário</button>
+      <button type="button" (click)="login('admin')">Entrar como Admin</button>
+        </form>
   
     <div class="register-link">
       <p>Não tem conta? <a routerLink="/registrar">Cadastre-se</a></p>

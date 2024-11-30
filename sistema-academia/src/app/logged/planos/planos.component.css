@@ -1,0 +1,26 @@
+.planos-container {
+    padding: 1rem;
+  
+    h1 {
+      color: #007bff;
+    }
+  
+    .planos-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .plano-card {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 5px;
+      width: 300px;
+      background-color: #f9f9f9;
+  
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+  

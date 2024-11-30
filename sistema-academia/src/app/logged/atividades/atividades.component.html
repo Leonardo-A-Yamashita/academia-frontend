@@ -1,0 +1,13 @@
+<div class="atividades-container">
+    <h1>Minhas Atividades</h1>
+    <p>Acompanhe suas últimas atividades na academia.</p>
+  
+    <div class="atividades-list">
+      <div *ngFor="let atividade of atividades" class="atividade-item">
+        <h2>{{ atividade.titulo }}</h2>
+        <p>{{ atividade.descricao }}</p>
+        <p><strong>Data:</strong> {{ atividade.data | date }}</p>
+      </div>
+    </div>
+  </div>
+  
