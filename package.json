@@ -2,8 +2,8 @@
   "name": "sistema-academia",
   "version": "0.0.0",
   "scripts": {
-    "build": "ng build --configuration production",
-    "start": "npm run build && npx http-server dist/sistema-academia -p 8080"
+    "postinstall": "ng build --configuration production",
+    "start": "npx http-server dist/sistema-academia -p $PORT"
   },
   "engines": {
     "node": "18.x",
@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "http-server": "^14.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
