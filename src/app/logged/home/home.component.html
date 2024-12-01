@@ -4,7 +4,7 @@
     <div *ngFor="let aviso of avisos" class="aviso">
       <h2>{{ aviso.titulo }}</h2>
       <p>{{ aviso.descricao }}</p>
-      <span>Publicado em: {{ aviso.dataPublicacao }}</span>
+      <span>Publicado em: {{ aviso.dataPublicacao | date:'dd/MM/yyyy' }}</span>
     </div>
   </div>
 </div>

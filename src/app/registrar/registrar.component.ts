@@ -29,8 +29,7 @@ export class RegistrarComponent {
         this.router.navigate(['/home']);
       },
       error: (error) => {
-        console.error('Erro ao registrar:', error);
-        this.mensagemErro = 'Erro ao registrar. Tente novamente.';
+        this.mensagemErro = 'Já existe uma conta registrada com este e-mail.';
       },
     });
   }

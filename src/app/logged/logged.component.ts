@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../services/storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logged',
@@ -10,7 +11,7 @@ export class LoggedComponent implements OnInit {
   role: string = '';
   menus: Array<{ label: string; path: string }> = [];
 
-  constructor(private storageService: StorageService) {}
+  constructor(private storageService: StorageService, private router: Router) {}
 
   ngOnInit() {
     this.role = this.storageService.getItem('role') || 'cliente';
@@ -28,5 +29,10 @@ export class LoggedComponent implements OnInit {
         { label: 'Gerenciar Avisos', path: 'gerenciar-aviso' },
       ];
     }
+  }
+
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/login']);
   }
 }

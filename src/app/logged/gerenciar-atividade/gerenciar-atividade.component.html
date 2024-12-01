@@ -31,7 +31,7 @@
     <li *ngFor="let atividade of atividades">
       <h3>{{ atividade.titulo }}</h3>
       <p>{{ atividade.descricao }}</p>
-      <p><strong>Data de Entrega:</strong> {{ atividade.dataEntrega }}</p>
+      <p><strong>Data de Entrega:</strong> {{ atividade.dataEntrega | date:'dd/MM/yyyy' }}</p>
       <p><strong>Professor:</strong> {{ atividade.professor }}</p>
       <button (click)="editarAtividade(atividade)">Editar</button>
       <button (click)="excluirAtividade(atividade.id)">Excluir</button>
