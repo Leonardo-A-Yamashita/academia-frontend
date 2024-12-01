@@ -1,12 +1,12 @@
 {
   "name": "sistema-academia",
   "version": "0.0.0",
-  "scripts": {
-    "build": "ng build --configuration production",
-    "build:ssr": "ng build --configuration production && ng run sistema-academia:server",
-    "serve:ssr": "node dist/sistema-academia/server/main.js",
-    "start": "npm run build:ssr && npm run serve:ssr"
-  },
+"scripts": {
+  "build": "npx ng build --configuration production",
+  "build:ssr": "npx ng build --configuration production && npx ng run sistema-academia:server",
+  "serve:ssr": "node dist/sistema-academia/server/main.js",
+  "start": "npm run build:ssr && npm run serve:ssr"
+},
   "engines": {
     "node": "18.x",
     "npm": "9.x"
