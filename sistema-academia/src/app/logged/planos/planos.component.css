@@ -1,26 +1,70 @@
 .planos-container {
-    padding: 1rem;
-  
-    h1 {
-      color: #007bff;
-    }
-  
-    .planos-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-  
-    .plano-card {
-      border: 1px solid #ddd;
-      padding: 1rem;
-      border-radius: 5px;
-      width: 300px;
-      background-color: #f9f9f9;
-  
-      h2 {
-        margin-top: 0;
-      }
-    }
-  }
-  
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.planos-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.plano-ativo {
+  background-color: #e7f7e7;
+  border: 1px solid #a3d8a3;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.plano-ativo h2 {
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.plano-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plano-card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.plano-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.plano-card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.plano-card button:hover {
+  background-color: #0056b3;
+}
+
+.mensagem {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #333;
+}

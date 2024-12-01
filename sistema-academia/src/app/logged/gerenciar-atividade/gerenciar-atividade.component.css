@@ -1,6 +1,6 @@
-/* gerenciar-atividade.component.css */
 
-/* Configuração básica */
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +9,7 @@ body {
     color: #333;
   }
   
-  /* Contêiner principal */
+  
   .gerenciar-atividades {
     max-width: 800px;
     margin: 20px auto;
@@ -19,14 +19,14 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  /* Título principal */
+  
   .gerenciar-atividades h1 {
     text-align: center;
     color: #2c3e50;
     margin-bottom: 20px;
   }
   
-  /* Formulário */
+  
   form {
     margin-bottom: 30px;
   }
@@ -77,7 +77,7 @@ body {
     background-color: #2980b9;
   }
   
-  /* Lista de atividades */
+  
   .gerenciar-atividades ul {
     list-style: none;
     padding: 0;

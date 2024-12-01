@@ -1,14 +1,23 @@
 <div class="planos-container">
-    <h1>Meus Planos</h1>
-    <p>Acompanhe seus planos de treino e pagamentos.</p>
-  
-    <div class="planos-list">
-      <div *ngFor="let plano of planos" class="plano-card">
-        <h2>{{ plano.titulo }}</h2>
-        <p>{{ plano.descricao }}</p>
-        <p><strong>Vencimento:</strong> {{ plano.vencimento | date }}</p>
-        <p><strong>Status:</strong> {{ plano.status }}</p>
-      </div>
-    </div>
+  <h1>Planos</h1>
+
+  <div *ngIf="planoAtivo; else semPlanoAtivo" class="plano-ativo">
+    <h2>Plano Ativo</h2>
+    <p><strong>Título:</strong> {{ planoAtivo.titulo }}</p>
+    <p><strong>Vencimento:</strong> {{ planoAtivo.vencimento | date }}</p>
   </div>
-  
+
+  <ng-template #semPlanoAtivo>
+    <p>Você não possui um plano ativo.</p>
+  </ng-template>
+
+  <h2>Planos Disponíveis</h2>
+  <div *ngFor="let plano of planosDisponiveis" class="plano-card">
+    <h3>{{ plano.titulo }}</h3>
+    <p>{{ plano.descricao }}</p>
+    <p><strong>Preço:</strong> R$ {{ plano.preco }}</p>
+    <button (click)="comprarPlano(plano)">Comprar</button>
+  </div>
+
+  <div *ngIf="mensagem" class="mensagem">{{ mensagem }}</div>
+</div>

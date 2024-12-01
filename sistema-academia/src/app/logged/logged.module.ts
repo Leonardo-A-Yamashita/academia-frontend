@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoggedComponent } from './logged.component';
-import { GerenciarAvisoComponent } from './gerenciar-aviso/gerenciar-aviso.component';
 
 const routes: Routes = [
   {

@@ -26,7 +26,6 @@ export class LoginComponent {
       next: (response: any) => {
         const { role } = response;
 
-        // Salvar o tipo de usuário no localStorage via serviço
         this.storageService.setItem('role', role);
 
         this.router.navigate(['/logged']);

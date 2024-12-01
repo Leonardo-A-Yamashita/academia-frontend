@@ -2,7 +2,7 @@
   display: flex;
   height: 100%;
   font-family: 'Arial', sans-serif;
-  overflow: hidden; /* Evita o overflow duplicado */
+  overflow: hidden; 
 }
 
 aside {
@@ -13,7 +13,7 @@ aside {
   display: flex;
   flex-direction: column;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);  
-  overflow: hidden; /* Evita o overflow duplicado */
+  overflow: hidden; 
 }
 
 aside nav ul {
@@ -33,7 +33,7 @@ aside nav ul li a {
   padding: 10px 15px;
   border-radius: 4px;
   transition: background-color 0.3s, transform 0.2s;
-  overflow: hidden; /* Evita o overflow duplicado */
+  overflow: hidden; 
 
 }
 
@@ -57,14 +57,14 @@ main {
   flex-grow: 1;
   padding: 1rem;
   background-color: #f9f9f9;
-  overflow-y: auto; /* Rolagem apenas no conteúdo principal */
-  height: 100vh; /* Garante que o conteúdo principal ocupe toda a altura disponível */
-  box-sizing: border-box; /* Inclui o padding no cálculo de altura */
-  overflow: hidden; /* Evita o overflow duplicado */
+  overflow-y: auto; 
+  height: 100vh; 
+  box-sizing: border-box; 
+  overflow: hidden; 
 
 }
 
-/* Ajuste para visualização responsiva */
+
 @media (max-width: 768px) {
   aside {
     width: 200px;
