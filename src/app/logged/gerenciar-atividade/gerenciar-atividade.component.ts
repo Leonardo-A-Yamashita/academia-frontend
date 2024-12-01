@@ -22,13 +22,13 @@ export class GerenciarAtividadeComponent implements OnInit {
   }
 
   listarAtividades() {
-    this.http.get('http://localhost:8080/api/atividades').subscribe((data: any) => {
+    this.http.get('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades').subscribe((data: any) => {
       this.atividades = data;
     });
   }
 
   salvarAtividade() {
-    this.http.post('http://localhost:8080/api/atividades', this.atividade).subscribe(() => {
+    this.http.post('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades', this.atividade).subscribe(() => {
       alert('Atividade salva com sucesso!');
       this.listarAtividades();
       this.atividade = { titulo: '', descricao: '', dataEntrega: '', professor: '' };
@@ -40,7 +40,7 @@ export class GerenciarAtividadeComponent implements OnInit {
   }
 
   excluirAtividade(id: number) {
-    this.http.delete(`http://localhost:8080/api/atividades/${id}`).subscribe(() => {
+    this.http.delete(`https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades/${id}`).subscribe(() => {
       alert('Atividade excluída com sucesso!');
       this.listarAtividades();
     });

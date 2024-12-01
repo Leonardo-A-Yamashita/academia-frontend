@@ -23,7 +23,7 @@ export class AtividadesComponent implements OnInit {
   }
   
   listarAtividades() {
-    this.http.get('http://localhost:8080/api/atividades').subscribe((data: any) => {
+    this.http.get('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades').subscribe((data: any) => {
       this.atividades = data;
     });
   }

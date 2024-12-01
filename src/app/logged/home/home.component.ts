@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   carregarAvisos() {
-    this.http.get('http://localhost:8080/api/avisos').subscribe((data: any) => {
+    this.http.get('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/avisos').subscribe((data: any) => {
       this.avisos = data;
     });
   }

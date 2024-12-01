@@ -22,7 +22,7 @@ export class LoginComponent {
   ) {}
 
   login() {
-    this.http.post('http://localhost:8080/api/login', this.credentials).subscribe({
+    this.http.post('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/login', this.credentials).subscribe({
       next: (response: any) => {
         const { role } = response;
 

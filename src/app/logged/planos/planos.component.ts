@@ -27,21 +27,21 @@ export class PlanosComponent implements OnInit {
   }
 
   carregarPlanoAtivo() {
-    this.http.get<Plano>('http://localhost:8080/api/planos/ativo').subscribe({
+    this.http.get<Plano>('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/planos/ativo').subscribe({
       next: (plano) => (this.planoAtivo = plano),
       error: () => (this.planoAtivo = null),
     });
   }
 
   carregarPlanosDisponiveis() {
-    this.http.get<Plano[]>('http://localhost:8080/api/planos/disponiveis').subscribe({
+    this.http.get<Plano[]>('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/planos/disponiveis').subscribe({
       next: (planos) => (this.planosDisponiveis = planos),
       error: (error) => console.error('Error fetching planos', error),
     });
   }
 
   comprarPlano(plano: any) {
-    this.http.post('http://localhost:8080/api/planos/comprar', plano.id).subscribe({
+    this.http.post('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/planos/comprar', plano.id).subscribe({
       next: (res: any) => {
         this.mensagem = res.message; 
         this.planoAtivo = res.plano; 

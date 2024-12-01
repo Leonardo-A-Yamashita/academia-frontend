@@ -24,7 +24,7 @@ export class RegistrarComponent {
       return;
     }
   
-    this.http.post('http://localhost:8080/api/registrar', this.registro).subscribe({
+    this.http.post('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/registrar', this.registro).subscribe({
       next: () => {
         this.router.navigate(['/home']);
       },

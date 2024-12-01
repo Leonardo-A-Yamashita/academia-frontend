@@ -17,7 +17,7 @@ export class GerenciarAvisoComponent {
 
   salvarAviso() {
     if (this.aviso.titulo && this.aviso.descricao) {
-      this.http.post('http://localhost:8080/api/avisos', this.aviso).subscribe(() => {
+      this.http.post('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/avisos', this.aviso).subscribe(() => {
         alert('Aviso criado com sucesso!');
         this.aviso = { titulo: '', descricao: '' };
       });
