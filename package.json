@@ -4,7 +4,7 @@
   "scripts": {
     "postinstall": "ng build --configuration production",
     "build": "ng build --configuration production",
-    "start": "npx http-server dist/sistema-academia -p $PORT -P http://localhost/"
+    "start": "npx serve dist/sistema-academia -l $PORT -s"
   },
   "engines": {
     "node": "18.x",
