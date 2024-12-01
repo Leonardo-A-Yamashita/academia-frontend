@@ -1,0 +1,6 @@
+{
+    "root": "dist/sistema-academia",
+    "routes": {
+      "/**": "index.html"
+    }
+  }
