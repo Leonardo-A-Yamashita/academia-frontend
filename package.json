@@ -2,16 +2,14 @@
   "name": "sistema-academia",
   "version": "0.0.0",
 "scripts": {
-  "ng": "ng",
-  "build": "ng build",
-  "build:ssr": "ng build && ng run sistema-academia:server",
+  "build": "ng build --configuration production",
+  "build:ssr": "ng build --configuration production && ng run sistema-academia:server",
   "serve:ssr": "node dist/sistema-academia/server/main.js",
-  "start": "npm run build:ssr && npm run serve:ssr",
-  "test": "ng test",
-  "watch": "ng build --watch --configuration development"
+  "start": "npm run build:ssr && npm run serve:ssr"
 },
   "engines": {
-    "node": "16.x"
+  "node": "18.x",
+  "npm": "9.x"
   },
   "private": true,
   "dependencies": {
