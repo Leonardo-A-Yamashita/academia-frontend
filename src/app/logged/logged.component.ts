@@ -4,7 +4,7 @@ import { StorageService } from '../services/storage.service';
 @Component({
   selector: 'app-logged',
   templateUrl: './logged.component.html',
-  styleUrls: ['./logged.component.scss'],
+  styleUrls: ['./logged.component.css'],
 })
 export class LoggedComponent implements OnInit {
   role: string = '';

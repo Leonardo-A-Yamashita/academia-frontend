@@ -12,7 +12,7 @@ interface Plano {
 @Component({
   selector: 'app-planos',
   templateUrl: './planos.component.html',
-  styleUrls: ['./planos.component.scss'],
+  styleUrls: ['./planos.component.css'],
 })
 export class PlanosComponent implements OnInit {
   planoAtivo: Plano | null = null;
