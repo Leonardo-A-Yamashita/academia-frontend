@@ -15,6 +15,8 @@ const routes: Routes = [
       { path: 'planos', loadChildren: () => import('./planos/planos.module').then(m => m.PlanosModule) },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'gerenciar-aviso', loadChildren: () => import('./gerenciar-aviso/gerenciar-aviso.module').then(m => m.GerenciarAvisoModule) },
+      { path: 'gerenciar-professor', loadChildren: () => import('./gerenciar-professores/gerenciar-professores.module').then(m => m.GerenciarProfessoresModule) },
+
     ],
   },
 ];

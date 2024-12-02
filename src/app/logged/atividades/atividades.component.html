@@ -7,6 +7,10 @@
       <p>{{ atividade.descricao }}</p>
       <p><strong>Data da Atividade:</strong> {{ atividade.dataEntrega | date:'dd/MM/yyyy' }}</p>
       <p><strong>Professor:</strong> {{ atividade.professor }}</p>
+      <p><strong>Vagas Disponíveis:</strong> {{ atividade.vagasDisponiveis }}</p>
+      <button (click)="cadastrarEmAtividade(atividade.id)" [disabled]="atividade.vagasDisponiveis === 0">
+        {{ atividade.vagasDisponiveis > 0 ? 'Cadastrar-se' : 'Sem Vagas' }}
+      </button>
     </li>
   </ul>
 </div>

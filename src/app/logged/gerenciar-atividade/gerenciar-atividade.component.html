@@ -5,12 +5,25 @@
   <form (ngSubmit)="salvarAtividade()">
     <div>
       <label for="titulo">Título</label>
-      <input type="text" id="titulo" [(ngModel)]="atividade.titulo" name="titulo" required />
+      <input
+        type="text"
+        id="titulo"
+        [(ngModel)]="atividade.titulo"
+        name="titulo"
+        required
+        placeholder="Digite o título da atividade"
+      />
     </div>
 
     <div>
       <label for="descricao">Descrição</label>
-      <textarea id="descricao" [(ngModel)]="atividade.descricao" name="descricao" required></textarea>
+      <textarea
+        id="descricao"
+        [(ngModel)]="atividade.descricao"
+        name="descricao"
+        required
+        placeholder="Descreva a atividade"
+      ></textarea>
     </div>
 
     <div>
@@ -20,10 +33,29 @@
 
     <div>
       <label for="professor">Nome do Professor</label>
-      <input type="text" id="professor" [(ngModel)]="atividade.professor" name="professor" />
+      <input
+        type="text"
+        id="professor"
+        [(ngModel)]="atividade.professor"
+        name="professor"
+        placeholder="Nome do professor responsável"
+      />
     </div>
 
-    <button type="submit">Salvar</button>
+    <div>
+      <label for="vagas">Número de Vagas</label>
+      <input
+        type="number"
+        id="vagas"
+        [(ngModel)]="atividade.vagas"
+        name="vagas"
+        required
+        min="1"
+        placeholder="Número de vagas disponíveis"
+      />
+    </div>
+
+    <button type="submit">{{ atividade.id ? 'Atualizar' : 'Salvar' }}</button>
   </form>
 
   <h2>Atividades Cadastradas</h2>
@@ -33,6 +65,7 @@
       <p>{{ atividade.descricao }}</p>
       <p><strong>Data de Entrega:</strong> {{ atividade.dataEntrega | date:'dd/MM/yyyy' }}</p>
       <p><strong>Professor:</strong> {{ atividade.professor }}</p>
+      <p><strong>Vagas:</strong> {{ atividade.vagas }}</p>
       <button (click)="editarAtividade(atividade)">Editar</button>
       <button (click)="excluirAtividade(atividade.id)">Excluir</button>
     </li>

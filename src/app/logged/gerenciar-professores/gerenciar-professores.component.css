@@ -1,0 +1,80 @@
+.gerenciar-professores {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #28a745; /* Verde para diferenciar dos avisos */
+  }
+  
+  form {
+    margin-bottom: 2rem;
+  }
+  
+  form div {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #28a745; /* Verde para botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  thead th {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+  }
+  
+  tbody td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  

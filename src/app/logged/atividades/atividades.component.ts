@@ -13,7 +13,9 @@ export class AtividadesComponent implements OnInit {
     titulo: '',
     descricao: '',
     dataEntrega: '',
-    professor: ''
+    professor: '',
+    vagas: 0,
+
   };
 
   constructor(private http: HttpClient) {}
@@ -25,6 +27,18 @@ export class AtividadesComponent implements OnInit {
   listarAtividades() {
     this.http.get('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades').subscribe((data: any) => {
       this.atividades = data;
+    });
+  }
+
+  cadastrarEmAtividade(id: number) {
+    this.http.post(`https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades/${id}/cadastrar`, {}).subscribe({
+      next: () => {
+        alert('Cadastro realizado com sucesso!');
+        this.listarAtividades(); 
+      },
+      error: (error) => {
+        alert(error.error || 'Erro ao realizar cadastro.');
+      },
     });
   }
 

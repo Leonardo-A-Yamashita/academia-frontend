@@ -27,6 +27,7 @@ export class LoggedComponent implements OnInit {
         { label: 'Atividades', path: 'atividades' },
         { label: 'Gerenciar Atividades', path: 'gerenciar-atividades' },
         { label: 'Gerenciar Avisos', path: 'gerenciar-aviso' },
+        {label: 'Gerenciar Professores', path: 'gerenciar-professor'},
       ];
     }
   }

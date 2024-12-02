@@ -4,15 +4,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-gerenciar-atividade',
   templateUrl: './gerenciar-atividade.component.html',
-  styleUrl: './gerenciar-atividade.component.css'
+  styleUrls: ['./gerenciar-atividade.component.css'],
 })
 export class GerenciarAtividadeComponent implements OnInit {
   atividades: any[] = [];
   atividade = {
+    id: null,
     titulo: '',
     descricao: '',
     dataEntrega: '',
-    professor: ''
+    professor: '',
+    vagas: 0,
   };
 
   constructor(private http: HttpClient) {}
@@ -28,10 +30,24 @@ export class GerenciarAtividadeComponent implements OnInit {
   }
 
   salvarAtividade() {
-    this.http.post('https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades', this.atividade).subscribe(() => {
-      alert('Atividade salva com sucesso!');
+    if (
+      !this.atividade.titulo ||
+      !this.atividade.descricao ||
+      !this.atividade.dataEntrega ||
+      this.atividade.vagas <= 0
+    ) {
+      alert('Por favor, preencha todos os campos obrigatórios corretamente!');
+      return;
+    }
+
+    const url = this.atividade.id
+      ? `https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades/${this.atividade.id}`
+      : 'https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades';
+
+    this.http.post(url, this.atividade).subscribe(() => {
+      alert(this.atividade.id ? 'Atividade atualizada com sucesso!' : 'Atividade salva com sucesso!');
       this.listarAtividades();
-      this.atividade = { titulo: '', descricao: '', dataEntrega: '', professor: '' };
+      this.resetarFormulario();
     });
   }
 
@@ -40,9 +56,15 @@ export class GerenciarAtividadeComponent implements OnInit {
   }
 
   excluirAtividade(id: number) {
-    this.http.delete(`https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades/${id}`).subscribe(() => {
-      alert('Atividade excluída com sucesso!');
-      this.listarAtividades();
-    });
+    if (confirm('Tem certeza que deseja excluir esta atividade?')) {
+      this.http.delete(`https://high-end-academia-back-bfa075238b2e.herokuapp.com/api/atividades/${id}`).subscribe(() => {
+        alert('Atividade excluída com sucesso!');
+        this.listarAtividades();
+      });
+    }
+  }
+
+  resetarFormulario() {
+    this.atividade = { id: null, titulo: '', descricao: '', dataEntrega: '', professor: '', vagas: 0 };
   }
 }
